@@ -100,7 +100,6 @@ namespace AssaultCube
             hProcess = OpenProcess(PROCESS_ALL_ACCESS, false, (uint)procId);
 
 
-            //Resolve base address 
             UIntPtr dynamicPtrBaseAddr = UIntPtr.Add(moduleBaseAddr, 0x17E254);
 
             UIntPtr ammoAddr = FindDMAAddy(hProcess, dynamicPtrBaseAddr, offSets, out value);
